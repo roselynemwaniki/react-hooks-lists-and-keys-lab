@@ -3,15 +3,21 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import About from "./About";
 import ProjectList from "./ProjectList";
-import user from "../data/user";
+
 
 function App() {
+  const projects = [
+    { id: 1, name: "Project 1", about: "Description 1", technologies: ["HTML", "CSS", "JavaScript"] },
+    { id: 2, name: "Project 2", about: "Description 2", technologies: ["React", "Redux", "Node.js"] },
+    { id: 3, name: "Project 3", about: "Description 3", technologies: ["Ruby", "Rails", "PostgreSQL"] },
+  ];
+
   return (
     <div>
       <NavBar />
-      <Home username={user.name} city={user.city} color={user.color} />
-      <About bio={user.bio} links={user.links} />
-      <ProjectList projects={user.projects} />
+      <Home />
+      <About />
+      <ProjectList projects={projects} />
     </div>
   );
 }
